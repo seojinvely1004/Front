@@ -1,0 +1,61 @@
+@import url(reset.css);
+@import url(webFont.css);
+
+* {
+    font-family: var(--font-content);
+    color: #333333;
+    text-decoration: none;
+
+    outline: none;
+    cursor: default;
+}
+
+:root {
+    /* font-family */
+    --font-logo-title: 'GangwonEduPower';
+    --font-content: 'Nanum Gothic';
+    --font-sub: 'GangwonEduAll';
+
+    /* font-size */
+    --font-size-logo: 30px;
+    --font-size-head1: 28px;
+    --font-size-head2: 26px;
+    --font-size-head3: 24px;
+    --font-size-head4: 22px;
+    --font-size-head5: 20px;
+    --font-size-head6: 18px;
+
+    --font-size-cont1: 16px;
+    --font-size-cont2: 14px;
+    --font-size-cont3: 12px;
+    --font-size-cont4: 10px;
+
+    --font-size-menu1: 14px;
+    --font-size-menu2: 12px;
+
+    --font-size-button: 14px;
+    --font-size-input: 12px;
+
+    /* color */
+    --color-main: ;
+    --color-sub: ;
+
+    --color-black: #333333;
+    /* 기본 폰트 색상, 검정 대용 */
+    --color-red: #982C2C;
+    /* 경고(변경, 탈퇴, 삭제 등) */
+    --color-green: #509797;
+    /* 긍정(동의, 저장, 확인) 등 */
+    --color-gray: #CCCCCC;
+    /* 기본 그레이 */
+    --color-darkgray: #B3B3B3;
+    /* placeholder, 유효성검사 */
+    --color-shadow: rgba(0, 0, 0, .2);
+    --shadow-basic: 3px 3px 5px var(--color-shadow);
+    --shadow-inner: 0px 3px 3px var(--color-shadow);
+
+    /* border */
+    --radius-basic: 20px;
+    --radius-small: 5px;
+    --radius-smaller: 3px;
+}
