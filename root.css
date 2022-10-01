@@ -2,12 +2,15 @@
 @import url(webFont.css);
 
 * {
-    font-family: var(--font-content);
     color: #333333;
     text-decoration: none;
 
     outline: none;
     cursor: default;
+}
+
+a {
+    cursor: pointer;
 }
 
 :root {
@@ -53,11 +56,15 @@
     /* 기본 그레이 */
     --color-darkgray: #909090;
     /* placeholder, 유효성검사 */
+
     --color-shadow: rgba(0, 0, 0, .2);
+    --color-shadow-font: rgba(0, 0, 0, .7);
+
     --shadow-basic: 3px 3px 5px var(--color-shadow);
     --shadow-inner: 0px 3px 3px var(--color-shadow);
+    --shadow-font: 3px 3px 5px var(--color-shadow-font);
 
-    /* border */
+    /* border radius */
     --radius-basic: 20px;
     --radius-button: 5px;
     --radius-smaller: 3px;
