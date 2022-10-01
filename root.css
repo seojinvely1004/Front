@@ -41,6 +41,8 @@
     --color-main: ;
     --color-sub: ;
 
+    --color-navi: rgba(0, 0, 0, .2);
+
     --color-black: #333333;
     /* 기본 폰트 색상, 검정 대용 */
     --color-red: #982C2C;
