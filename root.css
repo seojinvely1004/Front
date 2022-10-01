@@ -9,7 +9,8 @@
     cursor: default;
 }
 
-a {
+a,
+select {
     cursor: pointer;
 }
 
@@ -17,6 +18,17 @@ input {
     border: none;
 }
 
+input:focus {
+    outline: none;
+}
+
+/* input checkbox checked color */
+input[type="checkbox"] {
+    accent-color: var(--color-black);
+    cursor: pointer;
+}
+
+/* input button hover, active */
 input[type="button"] {
     border-radius: 5px;
     cursor: pointer;
@@ -34,6 +46,7 @@ input[type="button"]:active {
     transform: translate(1px, 1px);
 }
 
+/* input text */
 input[type="text"] {
     cursor: text;
 }
