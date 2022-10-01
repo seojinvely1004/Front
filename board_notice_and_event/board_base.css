@@ -40,15 +40,18 @@
         다크그레이 => darkgray: #909090
             폰트 회색
 
-        그림자 => shadow: rgba(0, 0, 0, .2);
+        그림자(기본) => shadow: rgba(0, 0, 0, .2)
             그림자 색(투명도 20%)
+        그림자(폰트용) => shadow-font: rgba(0, 0, 0, .7)
+            그림자 색(투명도 70%)
         
     >> 그림자
     --shadow-{name}
-        기본 => basic: 3px 3px 5px var(--color-shadow);
+        기본 => basic: 3px 3px 5px var(--color-shadow)
             기본적인 바깥 그림자
-        안쪽 => 0px 3px 3px var(--color-shadow);
+        안쪽 => inner: 0px 3px 3px var(--color-shadow)
             게시판 컨텐츠용 안쪽 그림자
+        폰트 => font: 3px 3px 5px var(--color-shadow-font)
 
     >> 모서리
     --radius-{name}
@@ -60,13 +63,16 @@
 /* =====// import */
 @import url(../root.css);
 
-/* =====// body display, height */
+/* =====// body display, height, font */
 body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
     position: relative;
+
+    font-family: var(--font-cont);
+    font-size: var(--font-size-cont3);
 }
 
 /* =====// header start //===== */
@@ -108,16 +114,63 @@ body {
 }
 
 /* logo box */
+.header_logo>a::after {
+    /* 로고 텍스트 뒷부분에 "|"를 입력 */
+    content: "|";
+    animation: none;
+}
+
+.header_logo>.change_logo::after {
+    /* .header_logo 자식 태그 클래스 */
+    /* 해당 클래스가 추가될 경우 blink 애니메이션 적용 */
+    animation: blink 0.5s step-end infinite;
+}
+
+@keyframes blink {
+    /* blink 애니메이션 */
+
+    0% {
+        opacity: 1;
+    }
+
+    49% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
 .header_logo {
     justify-content: center;
     align-items: center;
     width: 100px;
+
+    font-family: var(--font-logo);
+    font-size: var(--font-size-logo);
+
+}
+
+.header_logo>a {
+    color: #fff;
+    text-shadow: var(--shadow-font);
 }
 
 /* menu box */
 .header_menu {
     align-items: center;
+
+    position: relative;
+
     width: 600px;
+
+    font-size: var(--font-size-menu1);
+    font-weight: 600;
 }
 
 .header_menu>ul {
@@ -126,11 +179,60 @@ body {
     justify-content: space-between;
 
     width: 100%;
+
+}
+
+.header_menu>ul>li>a {
+    display: block;
+    width: 150px;
+
+    color: #fff;
+    text-align: center;
+
+    text-shadow: var(--shadow-font);
+}
+
+.header_menu>.show {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    width: 150px;
+    height: 2px;
+
+    background-color: #fff;
+
+    transition: left .3s ease-in;
 }
 
 /* member stat box */
 .header_member_stat {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
     width: 100px;
+}
+
+.member_image {
+    width: 50px;
+    height: 50px;
+
+    border-radius: 50%;
+    background-color: var(--color-gray);
+}
+
+.member_image+span {
+    width: 100px;
+
+    font-size: var(--font-size-cont3);
+    color: #fff;
+    text-align: center;
+
+    margin-top: 10px;
+
+    text-shadow: var(--shadow-font);
 }
 
 /* =====// header end //===== */
