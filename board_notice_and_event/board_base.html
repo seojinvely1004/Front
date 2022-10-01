@@ -16,9 +16,11 @@
     <!--// header section start -->
     <div class="background_image"></div>
     <header class="header">
+        <!-- logo box -->
         <div class="header_logo">
             <a href="#"></a>
         </div>
+        <!-- menu box -->
         <div class="header_menu">
             <ul>
                 <li><a href="#">어디 갈래</a></li>
@@ -26,16 +28,22 @@
                 <li><a href="#">소통 하자</a></li>
                 <li><a href="#">기억 해줘!</a></li>
             </ul>
+            <!-- underline -->
             <div class="menu_underline"></div>
         </div>
+        <!-- member stat box -->
         <div class="header_member_stat">
-            <div class="member_image"></div>
-            <span>비회원</span>
+            <!-- member profile image -->
+            <a href="#" class="member_image"></a>
+            <!-- member login status -->
+            <label for="member_name" class="member_name">홍길동</label>
+            <input type="checkbox" id="member_name">
+            <!-- member menu -->
             <div class="member_menu hidden">
 
             </div>
 
-            <div class="member_menu hidden">
+            <div class="non_member_menu hidden">
 
             </div>
         </div>
@@ -47,9 +55,8 @@
     <!-- container section end //-->
 
     <!--// footer section start -->
-
     <!-- footer section end //-->
-    <script src="board_base.js"></script>
 </body>
+<script src="board_base.js"></script>
 
 </html>
