@@ -37,7 +37,7 @@
             <a href="#" class="member_image"></a>
             <!-- member login status -->
             <label for="member_name" class="member_name">홍길동</label>
-            <input type="checkbox" id="member_name">
+            <input type="radio" id="member_name">
             <!-- member menu -->
             <div class="member_menu hidden">
 
@@ -52,7 +52,47 @@
 
     <!--// contents section start -->
     <section class="content">
+        <!-- admin menu -->
+        <div class="admin_menu">
+            <span>관리자</span>
+            <div class="line_s"></div>
+            <span>회원 정보</span>
+            <ul>
+                <li>
+                    <input type="radio" id="member_list" name="admin_menu">
+                    <label for="member_list">회원 목록</label>
+                </li>
+            </ul>
+            <span>명소 게시판</span>
+            <ul>
+                <li>
+                    <input type="radio" id="local_list" name="admin_menu">
+                    <label for="local_list">명소 목록</label>
+                    <input type="radio" id="local_add" name="admin_menu">
+                    <label for="local_add">명소 등록</label>
+                </li>
+            </ul>
+            <span>News & Event</span>
+            <ul>
+                <li>
+                    <input type="radio" id="board_list" name="admin_menu">
+                    <label for="board_list">공지 목록</label>
+                    <input type="radio" id="board_add" name="admin_menu">
+                    <label for="board_add">공지 등록</label>
+                </li>
+            </ul>
+            <span>동행 게시판</span>
+            <ul>
+                <li>
+                    <input type="radio" id="accompany_list" name="admin_menu">
+                    <label for="accompany_list">동행 목록</label>
+                </li>
+            </ul>
+        </div>
+        <!-- contents: board list -->
+        <div class="board_list">
 
+        </div>
     </section>
     <!-- container section end //-->
 </body>
