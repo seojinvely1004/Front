@@ -71,6 +71,8 @@ body {
 
     position: relative;
 
+    height: 100vh;
+
     font-family: var(--font-cont);
     font-size: var(--font-size-cont3);
 }
@@ -204,6 +206,7 @@ body {
     border-top-right-radius: 10px;
 
     transition: left .5s cubic-bezier(0.41, 0.09, 0.55, 1.38);
+    box-shadow: var(--shadow-basic);
 }
 
 /* member stat box */
@@ -247,6 +250,25 @@ body {
 /* =====// header end //===== */
 
 /* =====// contents start //===== */
+
+.content {
+    position: absolute;
+    top: calc((50% + 50px) - 400px);
+    left: calc(50% - 500px);
+    /*
+        top: (50% + 메뉴 높이 / 2) - content 높이 / 2
+        left: 50% - content 너비 / 2
+    */
+
+    width: 1000px;
+    height: 800px;
+
+    background-color: #fff;
+    border-radius: 20px;
+    opacity: .8;
+
+    box-shadow: var(--shadow-basic);
+}
 
 /* =====// contents end //===== */
 
