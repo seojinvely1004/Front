@@ -264,6 +264,7 @@ body {
 }
 
 #member_name:checked~div {
+    /* 회원 메뉴 상태 */
     display: block;
 }
 
