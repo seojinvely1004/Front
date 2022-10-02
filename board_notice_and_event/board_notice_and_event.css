@@ -63,266 +63,6 @@
             checkbox 등
 */
 
-/* =====// import */
-@import url(../root.css);
-
-/* =====// body display, height, font */
-body {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-    position: relative;
-
-    height: 100vh;
-
-    font-family: var(--font-cont);
-    font-size: var(--font-size-cont3);
-
-    overflow-x: hidden;
-}
-
-::-webkit-scrollbar {
-    width: 0;
-}
-
-/* =====// header start //===== */
-/* =====// background */
-.background_image {
-    position: fixed;
-    z-index: 1;
-
-    width: 100vw;
-    min-width: 1800px;
-    height: 100vh;
-
-    background: url(../images/main_img.jpg) no-repeat;
-    background-position: 0vh -20vh;
-    background-size: cover;
-}
-
-/* =====// header */
-.header {
-    display: flex;
-    justify-content: space-between;
-
-    /* 화면 상단 고정 */
-    position: fixed;
-    z-index: 5;
-
-    /* 100vw에서 양쪽 padding을 뺀 나머지 */
-    width: calc(100vw - (100vw - 1200px));
-    height: 100px;
-
-    background-color: var(--color-navi);
-
-    /* 네비 너비 1200을 뺀 나머지는 padding */
-    padding: 0 calc((100vw - 1200px) / 2);
-}
-
-.header>div {
-    display: flex;
-    height: 100%;
-}
-
-.header_logo>a::after {
-    /* logo box */
-    content: "|";
-    animation: none;
-}
-
-.header_logo>.change_logo::after {
-    /* class animation */
-    animation: blink 0.5s step-end infinite;
-}
-
-@keyframes blink {
-    /* blink 애니메이션 */
-
-    0% {
-        opacity: 1;
-    }
-
-    49% {
-        opacity: 1;
-    }
-
-    50% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 0;
-    }
-}
-
-.header_logo {
-    justify-content: center;
-    align-items: center;
-    width: 150px;
-
-    font-family: var(--font-logo);
-    font-size: var(--font-size-logo);
-
-}
-
-.header_logo>a {
-    color: #fff;
-    text-shadow: var(--shadow-font);
-
-    transition: .3s;
-}
-
-.header_logo>a:hover {
-    color: var(--color-main);
-}
-
-.header_logo>a:active {
-    filter: brightness(200%);
-}
-
-/* menu box */
-.header_menu {
-    align-items: center;
-
-    position: relative;
-
-    width: 600px;
-
-    font-size: var(--font-size-menu1);
-    font-weight: 600;
-}
-
-.header_menu>ul {
-    display: flex;
-    justify-content: space-between;
-
-    width: 100%;
-}
-
-.header_menu>ul>li>a {
-    display: block;
-    width: 150px;
-    height: 100px;
-
-    color: #fff;
-    text-align: center;
-    line-height: 95px;
-
-    text-shadow: var(--shadow-font);
-}
-
-.header_menu>.show {
-    position: absolute;
-    bottom: 0;
-
-    width: 150px;
-    height: 5px;
-
-    background-color: rgba(255, 255, 255, 0.8);
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-
-    transition: left .5s cubic-bezier(0.41, 0.09, 0.55, 1.38);
-    box-shadow: var(--shadow-basic);
-}
-
-/* member status box */
-.header_member_stat {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    width: 150px;
-}
-
-.member_image {
-    /* member_image */
-    width: 50px;
-    height: 50px;
-
-    border-radius: 50%;
-    background-color: var(--color-gray);
-}
-
-.member_image+input+label {
-    font-size: var(--font-size-cont3);
-    color: #fff;
-    text-align: center;
-
-    margin-top: 10px;
-
-    text-shadow: var(--shadow-font);
-
-    cursor: pointer;
-}
-
-#member_name {
-    /* image: checkbox */
-    display: none;
-}
-
-#member_name:checked~div {
-    display: block;
-}
-
-.menu_admin,
-.menu_member,
-.menu_non_member {
-    /* member status menu */
-    display: none;
-
-    position: fixed;
-    top: 100px;
-    z-index: 5;
-
-    width: 100px;
-
-    text-shadow: var(--shadow-basic);
-
-    background-repeat: no-repeat;
-}
-
-.hidden {
-    opacity: 0;
-}
-
-.menu_member {
-    height: 132px;
-
-    background: url(../images/member_menu.png);
-}
-
-.menu_non_member {
-    height: 100px;
-
-    background: url(../images/non_member_menu.png);
-}
-
-.menu_admin {
-    height: 160px;
-
-    background: url(../images/admin_menu.png);
-}
-
-.header_member_stat>div>ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-
-    width: 100px;
-    height: 100%
-}
-
-.header_member_stat>div>ul>li>a {
-    color: #fff;
-    text-shadow: var(--shadow-font);
-}
-
-/* =====// header end //===== */
-
 /* =====// contents start //===== */
 .content {
     position: relative;
@@ -337,6 +77,7 @@ body {
 
 /* =====// admin menu */
 .admin_menu {
+    /* 좌측 관리자메뉴 */
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -385,7 +126,7 @@ body {
     color: #fff;
     font-size: var(--font-size-menu2);
     text-align: center;
-    line-height: 30px;
+    line-height: 35px;
 
     border-radius: 5px;
     transition: background-color .3s;
@@ -436,7 +177,7 @@ body {
 }
 
 .board_top {
-    /* title, delete contents, add contents */
+    /* 게시판 제목, 선택 삭제, 게시물 등록 */
     position: relative;
     text-align: center;
 
@@ -492,7 +233,7 @@ body {
 
 /* =====// board column */
 .list_title {
-    /* title */
+    /* 게시글 제목 */
     display: flex;
     align-items: center;
 
@@ -504,7 +245,7 @@ body {
 }
 
 .list {
-    /* list */
+    /* 게시글 목록 */
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -512,7 +253,7 @@ body {
 }
 
 .board_cont span {
-    /* title, list */
+    /* 게시글 제목, 목록 내 폰트 */
     display: inline-block;
 
     font-size: var(--font-size-menu1);
@@ -521,7 +262,7 @@ body {
 }
 
 .list>li {
-    /* list */
+    /* 게시글 목록 */
     display: flex;
     align-items: center;
 
@@ -545,10 +286,12 @@ body {
 }
 
 .list>li>span>a:hover {
+    /* 게시글 제목에 링크, 마우스 오버시 밑줄 */
     text-decoration: underline;
 }
 
 .list b {
+    /* 공지, 이벤트 구분 머릿글, 이벤트 상태 */
     font-weight: 900;
     margin-right: 5px;
 }
@@ -570,34 +313,34 @@ body {
     font-size: var(--font-size-cont4);
 }
 
-/* title, list column width */
+/* =====// title, list column width */
 .board_no {
-    /* no */
+    /* 게시글 번호 */
     width: 80px;
 }
 
 .board_writer {
-    /* writer */
+    /* 게시글 작성자 */
     width: 110px
 }
 
 .board_title {
-    /* title */
+    /* 게시글 제목 */
     width: 380px;
 }
 
 .board_stat {
-    /* status */
+    /* 게시글 상태 */
     width: 60px;
 }
 
 .board_date {
-    /* regi date */
+    /* 게시글 등록 날짜 */
     width: 100px;
 }
 
 .board_select {
-    /* select */
+    /* 게시글 선택(체크박스) */
     width: 70px;
 }
 
@@ -670,7 +413,7 @@ body {
 
 /* =====// search, sort, event end */
 .board_sort {
-    /* sort box */
+    /* 하단 정렬 */
     width: 300px;
     height: 30px;
 
@@ -678,7 +421,7 @@ body {
 }
 
 .board_search {
-    /* search box */
+    /* 하단 검색 */
     width: 300px;
     height: 30px;
 
@@ -707,7 +450,7 @@ body {
 }
 
 .event_end_button {
-    /* event end button */
+    /* 선택 이벤트 종료 버튼 */
     display: inline-block;
 
     position: absolute;
@@ -726,5 +469,3 @@ body {
 }
 
 /* =====// board bottom end //===== */
-
-/* =====// contents end //===== */
