@@ -78,16 +78,22 @@ body {
 
     font-family: var(--font-cont);
     font-size: var(--font-size-cont3);
+
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 0;
 }
 
 /* =====// header start //===== */
 /* =====// background */
 .background_image {
-    position: absolute;
+    position: fixed;
     z-index: 1;
 
     width: 100vw;
-    min-width: 1100px;
+    min-width: 1800px;
     height: 100vh;
 
     background: url(../images/main_img.jpg) no-repeat;
@@ -326,6 +332,7 @@ body {
 
     width: 1200px;
     height: calc(100vh - 100px);
+    min-height: 900px;
 }
 
 /* =====// admin menu */
@@ -337,6 +344,7 @@ body {
 
     position: absolute;
     top: calc(50% - 400px);
+
     left: 0;
     z-index: 5;
 
@@ -459,6 +467,8 @@ body {
     font-size: var(--font-size-cont3);
     color: var(--color-red);
     font-weight: 900;
+
+    cursor: pointer;
 }
 
 .board_top>input {
