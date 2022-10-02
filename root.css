@@ -14,12 +14,26 @@ select {
     cursor: pointer;
 }
 
+select,
+option {
+    font-size: var(--font-size-cont3);
+    text-align: center;
+    color: #333;
+}
+
 input {
+    font-size: var(--font-size-cont3);
+
+    box-sizing: border-box;
     border: none;
 }
 
 input:focus {
     outline: none;
+}
+
+input::placeholder {
+    color: var(--color-darkgray);
 }
 
 /* input checkbox checked color */
@@ -30,7 +44,11 @@ input[type="checkbox"] {
 
 /* input button hover, active */
 input[type="button"] {
+    color: #fff;
+
+    background-color: var(--color-black);
     border-radius: 5px;
+
     cursor: pointer;
 
     transition: box-shadow, transform .1s, .1s;
@@ -48,6 +66,11 @@ input[type="button"]:active {
 
 /* input text */
 input[type="text"] {
+    color: var(--color-black);
+
+    background-color: #fff;
+    border-radius: 5px;
+
     cursor: text;
 }
 
