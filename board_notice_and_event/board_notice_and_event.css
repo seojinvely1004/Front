@@ -413,7 +413,7 @@
 /* =====// search, sort, event end */
 .board_sort {
     /* 하단 정렬 */
-    width: 300px;
+    width: 150px;
     height: 30px;
 
     text-align: center;
@@ -421,7 +421,7 @@
 
 .board_search {
     /* 하단 검색 */
-    width: 300px;
+    width: 350px;
     height: 30px;
 
     text-align: center;
@@ -429,7 +429,7 @@
 
 .board_sort>select,
 .board_search>select {
-    width: 100px;
+    width: 70px;
     height: 30px;
 
     border-radius: var(--radius-button);
@@ -437,15 +437,17 @@
 
 .board_sort>input,
 .board_search>input {
-    width: 100px;
+    width: 70px;
     height: 30px;
 
-    color: #fff;
-
-    background-color: var(--color-black);
     margin-left: 5px;
 
-    border-radius: var(--radius-button);
+}
+
+.board_search>input[type="text"] {
+    width: 140px;
+
+    padding: 0 10px;
 }
 
 .event_end_button {
