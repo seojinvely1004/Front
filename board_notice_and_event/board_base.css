@@ -56,8 +56,11 @@
     >> 모서리
     --radius-{name}
         기본 => basic => 20px
+            큰 창
         버튼 => button => 5px
+            작은 창, 대부분 input, button 등
         소형 => samller => 3px
+            checkbox 등
 */
 
 /* =====// import */
