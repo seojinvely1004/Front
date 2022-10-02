@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--// link css src -->
+    <link rel="stylesheet" href="../header/header.css">
+    <link rel="stylesheet" href="board_base.css">
+    <!-- link css src //-->
+
+</head>
+
+<body>
+    <!--// header section start -->
+    <div class="background_image"></div>
+    <header class="header">
+        <!-- logo box -->
+        <div class="header_logo">
+            <a href="#"></a>
+        </div>
+        <!-- menu box -->
+        <div class="header_menu">
+            <ul>
+                <li><a href="#">어디 갈래</a></li>
+                <li><a href="#">여행 일정</a></li>
+                <li><a href="#">소통 하자</a></li>
+                <li><a href="#">기억 해줘!</a></li>
+            </ul>
+            <!-- underline -->
+            <div class="menu_underline"></div>
+        </div>
+        <!-- member stat box -->
+        <div class="header_member_stat">
+            <!-- member profile image -->
+            <a href="#" class="member_image"></a>
+            <!-- member login status -->
+            <input type="checkbox" id="member_name">
+            <label for="member_name" class="member_name">관리자</label>
+            <!-- member menu -->
+            <div class="menu_non_member hidden">
+                <ul>
+                    <li>
+                        <a href="#">로그인</a>
+                    </li>
+                    <li>
+                        <a href="#">회원 가입</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="menu_member hidden">
+                <ul>
+                    <li>
+                        <a href="#">내 일정 관리</a>
+                    </li>
+                    <li>
+                        <a href="#">내 메시지</a>
+                    </li>
+                    <li>
+                        <a href="#">로그아웃</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="menu_admin">
+
+                <ul>
+                    <li>
+                        <a href="#">어드민 관리</a>
+                    </li>
+                    <li>
+                        <a href="#">게시판 관리</a>
+                    </li>
+                    <li>
+                        <a href="#">메시지</a>
+                    </li>
+                    <li>
+                        <a href="#">로그아웃</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- header section end //-->
+
+    <!--// contents section start -->
+    <section class="content">
+        <!-- admin menu -->
+        <div class="admin_menu">
+            <span>관리자</span>
+            <div class="line_s"></div>
+            <!-- member -->
+            <span>회원 정보</span>
+            <ul>
+                <li>
+                    <input type="radio" id="member_list" name="admin_menu">
+                    <label for="member_list">회원 목록</label>
+                </li>
+            </ul>
+            <!-- local -->
+            <span>명소 게시판</span>
+            <ul>
+                <li>
+                    <input type="radio" id="local_list" name="admin_menu">
+                    <label for="local_list">명소 목록</label>
+                    <input type="radio" id="local_add" name="admin_menu">
+                    <label for="local_add">명소 등록</label>
+                </li>
+            </ul>
+            <!-- news, event board -->
+            <span>News & Event</span>
+            <ul>
+                <li>
+                    <input type="radio" id="board_list" name="admin_menu">
+                    <label for="board_list">공지 목록</label>
+                    <input type="radio" id="board_add" name="admin_menu">
+                    <label for="board_add">공지 등록</label>
+                </li>
+            </ul>
+            <!-- accompany board -->
+            <span>동행 게시판</span>
+            <ul>
+                <li>
+                    <input type="radio" id="accompany_list" name="admin_menu">
+                    <label for="accompany_list">동행 목록</label>
+                </li>
+            </ul>
+        </div>
+        <!-- contents: board list box -->
+        <div class="board_list">
+            <div class="board_top">
+                <h1 class="board_title">
+                    NEWS & EVENT 목록
+                </h1>
+
+                <span class="select_delete">선택 삭제</span>
+                <input type="button" value="게시물 등록" class="add_contents">
+            </div>
+            <!-- board column title -->
+            <div class="board_cont">
+                <div class="list_title">
+                    <span class="board_no">번호</span>
+                    <span class="board_writer">작성자</span>
+                    <span class="board_title">제목</span>
+                    <span class="board_stat">상태</span>
+                    <span class="board_date">등록 일자</span>
+                    <span class="board_select">선택</span>
+                </div>
+                <!-- board rows -->
+                <ul class="list">
+                    <li>
+                        <span class="board_no">1</span>
+                        <span class="board_writer">홍길동</span>
+                        <span class="board_title">
+                            <a href=""><b>[이벤트]</b>제목입니다 제목입니다</a>
+                        </span>
+                        <span class="board_stat">
+                            <b class="event_inprogress">진행중</b>
+                        </span>
+                        <span class="board_date">
+                            2022.10.01<br>
+                            ~2022.10.02
+                        </span>
+                        <span class="board_select">
+                            <input type="checkbox">
+                        </span>
+                    </li>
+                    <li>
+                        <span class="board_no">2</span>
+                        <span class="board_writer">홍길동</span>
+                        <span class="board_title">
+                            <a href=""><b>[공지]</b>제목입니다 제목입니다</a>
+                        </span>
+                        <span class="board_stat"></span>
+                        <span class="board_date">
+                            2022.10.01
+                        </span>
+                        <span class="board_select">
+                            <input type="checkbox">
+                        </span>
+                    </li>
+                    <li>
+                        <span class="board_no">3</span>
+                        <span class="board_writer">홍길동</span>
+                        <span class="board_title">
+                            <a href=""><b>[이벤트]</b>제목입니다 제목입니다</a>
+                        </span>
+                        <span class="board_stat">
+                            <b class="event_inprogress">진행중</b>
+                        </span>
+                        <span class="board_date">
+                            2022.10.01<br>
+                            ~2022.10.02
+                        </span>
+                        <span class="board_select">
+                            <input type="checkbox">
+                        </span>
+                    </li>
+                    <li>
+                        <span class="board_no">4</span>
+                        <span class="board_writer">홍길동</span>
+                        <span class="board_title">
+                            <a href=""><b>[공지]</b>제목입니다 제목입니다</a>
+                        </span>
+                        <span class="board_stat"></span>
+                        <span class="board_date">
+                            2022.10.01
+                        </span>
+                        <span class="board_select">
+                            <input type="checkbox">
+                        </span>
+                    </li>
+                    <li>
+                        <span class="board_no">5</span>
+                        <span class="board_writer">홍길동</span>
+                        <span class="board_title">
+                            <a href=""><b>[공지]</b>제목입니다 제목입니다</a>
+                        </span>
+                        <span class="board_stat"></span>
+                        <span class="board_date">
+                            2022.10.01
+                        </span>
+                        <span class="board_select">
+                            <input type="checkbox">
+                        </span>
+                    </li>
+                    <li>
+                        <span class="board_no">6</span>
+                        <span class="board_writer">홍길동</span>
+                        <span class="board_title">
+                            <a href=""><b>[이벤트]</b>제목입니다 제목입니다</a>
+                        </span>
+                        <span class="board_stat">
+                            <b class="event_inprogress">진행중</b>
+                        </span>
+                        <span class="board_date">
+                            2022.10.01<br>
+                            ~2022.10.02
+                        </span>
+                        <span class="board_select">
+                            <input type="checkbox">
+                        </span>
+                    </li>
+                    <li>
+                        <span class="board_no">7</span>
+                        <span class="board_writer">홍길동</span>
+                        <span class="board_title">
+                            <a href=""><b>[공지]</b>제목입니다 제목입니다</a>
+                        </span>
+                        <span class="board_stat"></span>
+                        <span class="board_date">
+                            2022.10.01
+                        </span>
+                        <span class="board_select">
+                            <input type="checkbox">
+                        </span>
+                    </li>
+                    <li>
+                        <span class="board_no">8</span>
+                        <span class="board_writer">홍길동</span>
+                        <span class="board_title">
+                            <a href=""><b>[공지]</b>제목입니다 제목입니다</a>
+                        </span>
+                        <span class="board_stat"></span>
+                        <span class="board_date">
+                            2022.10.01
+                        </span>
+                        <span class="board_select">
+                            <input type="checkbox">
+                        </span>
+                    </li>
+                    <li>
+                        <span class="board_no">9</span>
+                        <span class="board_writer">홍길동</span>
+                        <span class="board_title">
+                            <a href=""><b>[이벤트]</b>제목입니다 제목입니다</a>
+                        </span>
+                        <span class="board_stat">
+                            <b class="event_end">종료</b>
+                        </span>
+                        <span class="board_date">
+                            2022.10.01<br>
+                            ~2022.10.02
+                        </span>
+                        <span class="board_select">
+                            <input type="checkbox">
+                        </span>
+                    </li>
+                    <li>
+                        <span class="board_no">10</span>
+                        <span class="board_writer">홍길동</span>
+                        <span class="board_title">
+                            <a href="#"><b>[이벤트]</b>제목입니다 제목입니다</a>
+                        </span>
+                        <span class="board_stat">
+                            <b class="event_end">종료</b>
+                        </span>
+                        <span class="board_date">
+                            2022.10.01<br>
+                            ~2022.10.02
+                        </span>
+                        <span class="board_select">
+                            <input type="checkbox">
+                        </span>
+                    </li>
+                </ul>
+            </div>
+            <!-- board list page number -->
+            <div class="board_page">
+                <div class="prev">
+                    <span>처음</span>
+                    <span>이전</span>
+                </div>
+                <ul class="board_page">
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                    <li>6</li>
+                    <li>7</li>
+                    <li>8</li>
+                    <li>9</li>
+                    <li>10</li>
+                </ul>
+                <div class="next">
+                    <span>다음</span>
+                    <span>마지막</span>
+                </div>
+            </div>
+            <!-- search, event -->
+            <div class="board_bottom">
+                <!-- sort -->
+                <form action="" class="board_sort">
+                    <select name="board_sort" id="board_sort">
+                        <option value="regi_date">등록순</option>
+                        <option value="notice">공지</option>
+                        <option value="event">이벤트</option>
+                    </select>
+                    <input type="button" value="정렬">
+                </form>
+
+                <!-- search -->
+                <form action="" class="board_search">
+
+                    <select name="board_search" id="board_search">
+                        <option value="title">제목</option>
+                        <option value="cont">내용</option>
+                        <option value="writer">작성자</option>
+                    </select>
+                    <input type="button" value="검색">
+                </form>
+
+                <!-- event end -->
+                <span class="event_end_button">선택 이벤트 종료</span>
+            </div>
+        </div>
+    </section>
+    <!-- container section end //-->
+</body>
+<script src="../header/header.js"></script>
+
+</html>
