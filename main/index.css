@@ -162,7 +162,8 @@
     width: 300px;
     height: 500px;
 
-    background-color: antiquewhite;
+    background-image: url(../images/left.jpg);
+    background-size: cover;
 
     border-radius: var(--radius-basic);
 }
@@ -178,7 +179,9 @@
     height: 300px;
     margin-bottom: 30px;
 
-    background-color: black;
+    background-image: url(../images/mid_top.jpg);
+    background-size: cover;
+
 
     border-radius: var(--radius-basic)
 }
@@ -196,24 +199,40 @@
 }
 
 .content_right>.item {
+    /* 아이템 5개에 중복으로 들어갈 속성값들 한번에 처리 */
     height: 80px;
 
-    background-color: blue;
+    background-size: 100%;
     margin-bottom: 25px;
 
     border-radius: var(--radius-basic);
 }
 
-.content_right>.item:first-of-type {}
+.content_right>.item:first-of-type {
+    /* 이미지들은 나중에 다 빼고 게시판이랑 연결할거에요 */
+    background-image: url(../images/right1.jpg);
+}
 
-.content_right>.item:nth-of-type(2) {}
+.content_right>.item:nth-of-type(2) {
+    background-image: url(../images/right2.jpg);
+    background-position-y: -50px;
+}
 
-.content_right>.item:nth-of-type(3) {}
+.content_right>.item:nth-of-type(3) {
+    background-image: url(../images/right3.jpg);
 
-.content_right>.item:nth-of-type(4) {}
+}
+
+.content_right>.item:nth-of-type(4) {
+    background-image: url(../images/right4.jpg);
+    background-position-y: -20px;
+}
 
 .content_right>.item:last-of-type {
+    background-image: url(../images/right5.jpg);
+
     margin-bottom: 0;
 }
+
 
 /* =====// contents end //===== */
