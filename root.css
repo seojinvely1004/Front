@@ -21,6 +21,20 @@ option {
     color: #333;
 }
 
+textarea {
+    cursor: text;
+    line-height: 25px;
+}
+
+textarea::-webkit-scrollbar {
+    width: 5px;
+}
+
+textarea::-webkit-scrollbar-thumb {
+    background-color: #333;
+    border-radius: 3px;
+}
+
 input {
     font-size: var(--font-size-cont3);
 
@@ -43,6 +57,7 @@ input[type="checkbox"] {
 }
 
 /* input button hover, active */
+input[type="submit"],
 input[type="button"] {
     color: #fff;
 
@@ -51,21 +66,24 @@ input[type="button"] {
 
     cursor: pointer;
 
-    transition: box-shadow, transform .1s, .1s;
+    transition: box-shadow, transform 0.1s, 0.1s;
 }
 
+input[type="submit"]:hover,
 input[type="button"]:hover {
     box-shadow: 1px 1px 0px #000;
     transform: translate(-1px, -1px);
 }
 
+input[type="submit"]:active,
 input[type="button"]:active {
     box-shadow: none;
     transform: translate(1px, 1px);
 }
 
-/* input text */
-input[type="text"] {
+/* input text, password */
+input[type="text"],
+input[type="password"] {
     color: var(--color-black);
 
     background-color: #fff;
@@ -76,10 +94,10 @@ input[type="text"] {
 
 :root {
     /* font-family */
-    --font-logo: 'GangwonEduPower';
-    --font-title: 'GangwonEduPower';
-    --font-cont: 'Nanum Gothic';
-    --font-msg: 'GangwonEduAll';
+    --font-logo: "GangwonEduPowerExtraBoldA";
+    --font-title: "GangwonEduPowerExtraBoldA";
+    --font-cont: "Nanum Gothic";
+    --font-msg: "GangwonEdu_OTFBoldA";
 
     /* font-size */
     --font-size-logo: 30px;
@@ -105,21 +123,22 @@ input[type="text"] {
     --color-main: ;
     --color-sub: ;
 
-    --color-navi: rgba(0, 0, 0, .2);
+    --color-navi: rgba(0, 0, 0, 0.2);
 
     --color-black: #333333;
     /* 기본 폰트 색상, 검정 대용 */
-    --color-red: #982C2C;
+    --color-red: #982c2c;
     /* 경고(변경, 탈퇴, 삭제 등) */
     --color-green: #509797;
     /* 긍정(동의, 저장, 확인) 등 */
-    --color-gray: #CCCCCC;
+    --color-lightgray: #eeeeee;
+    --color-gray: #cccccc;
     /* 기본 그레이 */
     --color-darkgray: #909090;
     /* placeholder, 유효성검사 */
 
-    --color-shadow: rgba(0, 0, 0, .2);
-    --color-shadow-font: rgba(0, 0, 0, .7);
+    --color-shadow: rgba(0, 0, 0, 0.2);
+    --color-shadow-font: rgba(0, 0, 0, 0.7);
 
     --shadow-basic: 3px 3px 5px var(--color-shadow);
     --shadow-inner: 0px 3px 3px var(--color-shadow);

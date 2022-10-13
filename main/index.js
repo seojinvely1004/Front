@@ -1,8 +1,14 @@
+"use strict";
+
 let background_image = document.querySelector(".background_image");
 let contents = document.querySelector(".contents");
 let search_box = document.querySelector(".search_box");
 let search_text = document.querySelector(".search_box>h1");
 let search_svg = document.querySelector(".search_box>svg");
+
+/*full screen 떄문에 추가함 일단~ */
+let viewport = document.querySelector(".viewport");
+let banner = document.querySelector(".banner");
 
 function wheelAction() {
     window.addEventListener("wheel", (event) => {
@@ -10,16 +16,16 @@ function wheelAction() {
 
         if (wheelAction > 0) {
             // 휠 업
-            background_image.style.backgroundPositionY = "-500px";
+            background_image.style.backgroundPositionY = "-700px";
             search_box.style.top = "calc(15vh)";
             contents.style.bottom = "0vh";
 
             if (window.innerWidth <= 1920) {
-                background_image.style.height = "100px";
+                background_image.style.height = "300px";
 
-                search_box.style.top = "20px";
-                search_text.style.fontSize = "0px";
-                search_svg.style.top = "100px";
+                search_box.style.top = "115px";
+                // search_text.style.fontSize = "0px";
+                // search_svg.style.top = "100px";
             } else {
                 background_image.style.height = "calc(100vh - 600px)";
             }
@@ -27,7 +33,7 @@ function wheelAction() {
             // 휠 다운
             background_image.style.height = "100vh";
 
-            background_image.style.backgroundPositionY = "0px";
+            background_image.style.backgroundPositionY = "-35vh";
             search_box.style.top = "calc(50vh - 220px / 2)";
             contents.style.bottom = "-100vh";
 
@@ -42,3 +48,5 @@ function wheelAction() {
 }
 
 wheelAction();
+
+/*change full screen*/

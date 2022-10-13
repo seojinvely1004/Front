@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../header/header.css">
+    <link rel="stylesheet" href="pw_edit.css">
+</head>
+
+<body>
+    <!--// header section start -->
+    <div class="background_image"></div>
+    <header class="header">
+        <!-- logo box -->
+        <div class="header_logo">
+            <a href="#"></a>
+        </div>
+        <!-- menu box -->
+        <div class="header_menu">
+            <ul>
+                <li><a href="#">어디 갈래</a></li>
+                <li><a href="#">여행 일정</a></li>
+                <li><a href="#">소통 하자</a></li>
+                <li><a href="#">기억 해줘!</a></li>
+            </ul>
+            <!-- underline -->
+            <div class="menu_underline"></div>
+        </div>
+        <!-- member stat box -->
+        <div class="header_member_stat">
+            <!-- member profile image -->
+            <a href="#" class="member_image"></a>
+            <!-- member login status -->
+            <input type="checkbox" id="member_name">
+            <label for="member_name" class="member_name">비회원</label>
+            <!-- member menu -->
+            <div class="menu_non_member">
+                <ul>
+                    <li>
+                        <a href="#">로그인</a>
+                    </li>
+                    <li>
+                        <a href="#">회원 가입</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="menu_member hidden">
+                <ul>
+                    <li>
+                        <a href="#">내 일정 관리</a>
+                    </li>
+                    <li>
+                        <a href="#">내 메시지</a>
+                    </li>
+                    <li>
+                        <a href="#">로그아웃</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="menu_admin hidden">
+
+                <ul>
+                    <li>
+                        <a href="#">어드민 관리</a>
+                    </li>
+                    <li>
+                        <a href="#">게시판 관리</a>
+                    </li>
+                    <li>
+                        <a href="#">메시지</a>
+                    </li>
+                    <li>
+                        <a href="#">로그아웃</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- header section end //-->
+
+    <!-- contents: board list box -->
+    <div class="content">
+        <form action="" class="member_pedit_box" onsubmit="return pw0_check()">
+            <h1>비밀번호 변경</h1>
+
+            <!--member_pedit_p1-->
+            <div class="member_pedit_p1">
+                <h2>기존 비밀번호</h2>
+                <input type="text" maxlength="18">
+
+
+            </div>
+
+            <!--ㅡmember_pedit_p2-->
+            <div class="member_pedit_p2">
+                <h2>새로운 비밀번호</h2>
+                <input type="text" maxlength="18">
+                <span>소문자
+                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 3.5L4.5 8.5L8.5 1"" stroke-width=" 2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </span>
+                <span>대문자
+                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 3.5L4.5 8.5L8.5 1"" stroke-width=" 2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </span>
+                <span>숫자
+                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 3.5L4.5 8.5L8.5 1"" stroke-width=" 2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </span>
+                <span>특수문자
+                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 3.5L4.5 8.5L8.5 1"" stroke-width=" 2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </span>
+                <span>8 ~ 18자리
+                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 3.5L4.5 8.5L8.5 1"" stroke-width=" 2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </span>
+            </div>
+
+
+            <!--ㅡmember_pedit_p3-->
+            <div class="member_pedit_p3">
+                <h2>새로운 비밀번호 확인</h2>
+                <input type="text" maxlength="18">
+                <span>비밀번호 확인
+                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 3.5L4.5 8.5L8.5 1"" stroke-width=" 2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </span>
+
+
+            </div>
+
+            <!--member_pedit_button-->
+            <div class="member_pedit_button">
+                <input type="submit" value="변경하기">
+                <input type="button" value="취소">
+
+            </div>
+
+
+
+        </form>
+
+
+
+    </div>
+    <!-- container section end //-->
+
+</body>
+<script src="../header/header.js"></script>
+<script src="pw_edit.js"></script>
+
+</html>
