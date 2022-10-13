@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../header/header.css">
+    <link rel="stylesheet" href="leave.css">
+</head>
+
+<body>
+    <!--// header section start -->
+    <div class="background_image"></div>
+    <header class="header">
+        <!-- logo box -->
+        <div class="header_logo">
+            <a href="#"></a>
+        </div>
+        <!-- menu box -->
+        <div class="header_menu">
+            <ul>
+                <li><a href="#">어디 갈래</a></li>
+                <li><a href="#">여행 일정</a></li>
+                <li><a href="#">소통 하자</a></li>
+                <li><a href="#">기억 해줘!</a></li>
+            </ul>
+            <!-- underline -->
+            <div class="menu_underline"></div>
+        </div>
+        <!-- member stat box -->
+        <div class="header_member_stat">
+            <!-- member profile image -->
+            <a href="#" class="member_image"></a>
+            <!-- member login status -->
+            <input type="checkbox" id="member_name">
+            <label for="member_name" class="member_name">비회원</label>
+            <!-- member menu -->
+            <div class="menu_non_member">
+                <ul>
+                    <li>
+                        <a href="#">로그인</a>
+                    </li>
+                    <li>
+                        <a href="#">회원 가입</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="menu_member hidden">
+                <ul>
+                    <li>
+                        <a href="#">내 일정 관리</a>
+                    </li>
+                    <li>
+                        <a href="#">내 메시지</a>
+                    </li>
+                    <li>
+                        <a href="#">로그아웃</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="menu_admin hidden">
+
+                <ul>
+                    <li>
+                        <a href="#">어드민 관리</a>
+                    </li>
+                    <li>
+                        <a href="#">게시판 관리</a>
+                    </li>
+                    <li>
+                        <a href="#">메시지</a>
+                    </li>
+                    <li>
+                        <a href="#">로그아웃</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- header section end //-->
+
+    <!-- contents: leave box -->
+    <div class="content">
+
+        <form action="" class="leave_box" onsubmit="">
+            <h1>회원 탈퇴</h1>
+
+            <div class="pw_check_box">
+                <span>비밀번호 확인</span>
+                <input type="password" name="user_pw" maxlength="18">
+            </div>
+
+            <div class="leave_button">
+
+                <input type="submit" value="탈퇴">
+                <input type="button" value="취소" onclick="window.history.back()">
+            </div>
+        </form>
+    </div>
+    <!-- container section end //-->
+
+</body>
+<script src="../header/header.js"></script>
+<script src="leave.js"></script>
+
+</html>
