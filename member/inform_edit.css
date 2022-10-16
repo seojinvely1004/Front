@@ -125,6 +125,7 @@
 }
 
 .member_edit_box > div > select {
+    border: none;
     border-bottom: 1px solid #333;
     /*margin-top: 10px;*/
 }
@@ -133,6 +134,7 @@
 .member_edit_id {
     font-size: 0;
 }
+
 
 .member_edit_id > input,
 .member_edit_name > input {
@@ -147,13 +149,14 @@
 .member_edit_phone {
     font-size: 0;
 }
+
 .member_edit_phone > select {
     width: 60px;
     height: 30px;
     margin-right: 110px;
     margin-top: 10px;
-    border-radius: var(--radius-button);
 }
+
 .member_edit_phone > input[type="text"] {
     width: 60px;
     margin-left: 15px;
@@ -164,6 +167,7 @@
     margin-top: 10px;
     /*box, email > input 공통*/
 }
+
 .member_edit_phone > input[type="text"]:first-of-type {
     width: 50px;
     margin-left: 0;
@@ -195,7 +199,6 @@
     width: 85px;
     height: 30px;
     margin-left: 115px;
-    border-radius: var(--radius-button);
 }
 
 /*======member_edit_button*/
@@ -204,11 +207,13 @@
     font-size: 0;
     padding: 0 16px;
 }
+
 .member_edit_button > input[type="submit"] {
     width: 90px;
     height: 30px;
     margin-bottom: 5px;
 }
+
 .member_edit_button > input[type="button"] {
     width: 60px;
     height: 30px;
