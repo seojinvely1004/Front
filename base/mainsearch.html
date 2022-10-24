@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
- 
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,7 +8,6 @@
     <title>Document</title>
     <link rel="stylesheet" href="../header/header.css">
     <link rel="stylesheet" href="base.css">
-    <link rel="stylesheet" href="inform_edit.css">
 </head>
 
 <body>
@@ -85,78 +84,13 @@
 
     <!-- contents: board list box -->
     <div class="content">
-        <!---member edit form start--->
-        <form action="" class="member_edit_box" onsubmit="edit_button_check()">
-            <h1>회원 정보 수정</h1>
-
-            <!--member edit id-->
-            <div class="member_edit_id">
-                <h2>아이디</h2>
-                <input type="text" name="member_id" value="GilDong1004" disabled>
-
-            </div>
-
-            <!--member edit name-->
-            <div class="member_edit_name">
-                <h2>이름</h2>
-                <input type="text" name="member_name" value="홍길동" readonly>
-
-            </div>
-
-            <!--member edit phone-->
-            <div class="member_edit_phone">
-                <h2>연락처</h2>
-                <select name="phone" id="member_edit_phone">
-                    <option value="none">통신사</option>
-                    <option value="SKT">SKT</option>
-                    <option value="KT">KT</option>
-                    <option value="LGU">LGU</option>
-                    <option value="SAVE">알뜰</option>
-                </select>
-                <input type="text" maxlength="3">
-                <input type="text" maxlength="4">
-                <input type="text" maxlength="4">
-            </div>
-
-            <!--member edit email-->
-            <div class="member_edit_email">
-                <h2>이메일</h2>
-                <input type="text" maxlength="12">
-                <span>@</span>
-                <input type="text" maxlength="12">
-                <select name="email" id="member_edit_email">
-                    <option value="">직접입력</option>
-                    <option value="gmail.com">구글</option>
-                    <option value="naver.com">네이버</option>
-                    <option value="kakao.com">카카오</option>
-                    <option value="nate.com">네이트</option>
-                    <option value="hanmail.net">다음</option>
-                </select>
-            </div>
 
 
-            <!--member edit button-->
-            <div class="member_edit_button">
-                <input type="submit" value="수정하기">
-                <input type="button" value="취소">
-                <!--ㅡ비밀번호변경하기, 회원탈퇴-->
-                <span>
-                    <a href="pw_edit.html" title="비밀번호 변경하기로 이동">비밀번호 변경</a>
-                    <a href="#" title="계정 탈퇴">계정 탈퇴</a>
-                </span>
-            </div>
-
-
-
-
-        </form>
-        <!--member edit form end-->
     </div>
     <!-- container section end //-->
 
 </body>
 <script src="../header/header.js"></script>
 <script src="base.js"></script>
-<script src="inform_edit.js"></script>
 
 </html>

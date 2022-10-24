@@ -127,7 +127,6 @@
 .member_edit_box > div > select {
     border: none;
     border-bottom: 1px solid #333;
-    /*margin-top: 10px;*/
 }
 
 /*====member_id*/
@@ -135,12 +134,23 @@
     font-size: 0;
 }
 
-
 .member_edit_id > input,
 .member_edit_name > input {
     width: 200px;
     margin-top: 10px;
+
+    border-radius: 0;
+    z-index: 5;
+
     /* id, name > input 공통*/
+}
+
+/*vs에선먹는데 이클립스에 넣으니 안된당*/
+.content .member_edit_id > input[type="text"]:first-of-type,
+.content .member_edit_name > input[type="text"]:first-of-type {
+    border: none;
+    border-bottom: 1px solid #333;
+    z-index: 5;
 }
 
 /*====member_name*/
