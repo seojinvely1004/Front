@@ -4,7 +4,7 @@ let background_image = document.querySelector(".background_image");
 let contents = document.querySelector(".contents");
 let search_box = document.querySelector(".search_box");
 let search_text = document.querySelector(".search_box>h1");
-let search_svg = document.querySelector(".search_box>form>label>svg");
+let search_svg = document.querySelector(".search_box>svg");
 
 /*full screen 떄문에 추가함 일단~ */
 let viewport = document.querySelector(".viewport");
@@ -48,5 +48,15 @@ function wheelAction() {
 }
 
 wheelAction();
+/*=======change full screen end =======*/
 
-/*change full screen*/
+/*=======키워드 유효성검사 start =======*/
+
+function keyword() {
+    let search_value = document.querySelector("#search").value;
+    if (search_value == "") {
+        alert("검색어를 입력해주세요~!");
+        return false;
+    }
+}
+/*=======키워드 유효성검사 end =======*/

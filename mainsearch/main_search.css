@@ -63,6 +63,15 @@
             checkbox 등
 */
 
+u,
+i,
+strike,
+b {
+    font-size: 12px !important;
+    text-decoration: none;
+    color: #333;
+    font-family: var(--font-content);
+}
 /* =====// search box start //===== */
 .content::-webkit-scrollbar {
     width: 10px;
@@ -90,7 +99,7 @@
     transition: top cubic-bezier(0.4, 0.37, 0.59, 1.3) 0.5s;
 }
 
-.search_box > input {
+.search_box > input[type="text"] {
     width: 300px;
     height: 60px;
 
@@ -104,7 +113,11 @@
     border-radius: var(--radius-basic);
 }
 
-.search_box > svg {
+.search_box > input[type="submit"] {
+    display: none;
+}
+
+.search_box > label > svg {
     /*돋보기*/
     position: absolute;
     top: 20px;
@@ -114,13 +127,13 @@
     cursor: pointer;
 }
 
-.search_box > svg > path,
-.search_box > svg > circle {
+.search_box > label > svg > path,
+.search_box > label > svg > circle {
     transition: stroke 0.3s;
 }
 
-.search_box > svg:hover > path,
-.search_box > svg:hover > circle {
+.search_box > label > svg:hover > path,
+.search_box > label > svg:hover > circle {
     stroke: var(--color-black);
 }
 
@@ -159,7 +172,7 @@
     margin: 10px 0;
 }
 
-.search_content>h1>span {
+.search_content > h1 > span {
     font-size: 14px;
 }
 
